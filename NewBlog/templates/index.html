@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class = "jumbotron text-center">
+    <h3 style = "margin-left: -150px">MyBlog Sitemize Hos Geldiniz </h3>
+    <hr>
+    <p>Bu blogda belirli mevzular hakkinda makaleler paylasa bilir ve diger programci arkadaslariniza yardimci ola bilirsiniz</p>
+</div>
+
+
+<ul>
+
+{% for article in articles %}
+<li>Article Id: {{article.id}} - Article Title: {{article.title}} - Article Content: {{article.content}}</li>
+{% endfor %}
+</ul>
+
+{% endblock body %}
